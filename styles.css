@@ -901,6 +901,198 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   pointer-events: auto;
 }
 
+/* ── CSS-ONLY ORB (reemplazo ligero de la escena Three.js) ── */
+.css-orb-scene {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  perspective: 900px;
+}
+
+/* Núcleo esférico con shading simulado por gradiente */
+.css-orb-core {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 230px;
+  height: 230px;
+  margin: -115px 0 0 -115px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(196,181,253,0.95) 0%, rgba(79,70,229,0.95) 38%, rgba(30,27,75,0.95) 100%);
+  box-shadow:
+    0 0 60px 8px rgba(79,70,229,0.35),
+    inset -16px -16px 50px rgba(30,27,75,0.55),
+    inset 12px 12px 40px rgba(167,139,250,0.35);
+  animation: orb-core-pulse 4.5s ease-in-out infinite;
+}
+
+/* Brillo interno que gira para simular rotación de la esfera sin distorsionar el contorno */
+.css-orb-core::before {
+  content: '';
+  position: absolute;
+  top: 8%; left: 12%;
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, transparent 70%);
+  animation: orb-core-highlight-spin 16s linear infinite;
+  transform-origin: 160% 160%;
+}
+
+/* Halo atmosférico */
+.css-orb-core::after {
+  content: '';
+  position: absolute;
+  top: -10px; left: -10px; right: -10px; bottom: -10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(129,140,248,0.18) 60%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Jaula de alambre (wireframe) */
+.css-orb-wire {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 300px;
+  height: 300px;
+  margin: -150px 0 0 -150px;
+  border-radius: 50%;
+  border: 1px solid rgba(129,140,248,0.35);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 13.5px, rgba(129,140,248,0.16) 13.5px 14.5px),
+    repeating-linear-gradient(90deg, transparent 0 13.5px, rgba(129,140,248,0.16) 13.5px 14.5px);
+  -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  animation: orb-wire-spin 22s linear infinite reverse;
+}
+
+/* Anillos orbitales */
+.css-orb-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  border-style: solid;
+  transform-style: preserve-3d;
+}
+
+.css-orb-ring-1 {
+  width: 360px;
+  height: 360px;
+  margin: -180px 0 0 -180px;
+  border-width: 1.5px;
+  border-color: rgba(139,92,246,0.45) rgba(139,92,246,0.45) transparent transparent;
+  transform: rotateX(72deg) rotate(0deg);
+  animation: orb-ring1-spin 14s linear infinite;
+}
+
+.css-orb-ring-2 {
+  width: 410px;
+  height: 410px;
+  margin: -205px 0 0 -205px;
+  border-width: 1px;
+  border-color: transparent rgba(14,165,233,0.4) rgba(14,165,233,0.4) transparent;
+  transform: rotateX(60deg) rotateZ(45deg);
+  animation: orb-ring2-spin 19s linear infinite reverse;
+}
+
+/* Satélites orbitando */
+.css-orb-sat {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 320px;
+  height: 320px;
+  margin: -160px 0 0 -160px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.css-orb-sat::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  width: 11px;
+  height: 11px;
+  margin-left: -5.5px;
+  border-radius: 50%;
+}
+
+.css-orb-sat-1 {
+  transform: rotateX(70deg) rotate(10deg);
+  animation: orb-sat-spin 7s linear infinite;
+}
+.css-orb-sat-1::before { background: #c4b5fd; box-shadow: 0 0 10px 3px rgba(139,92,246,0.8); }
+
+.css-orb-sat-2 {
+  width: 380px; height: 380px; margin: -190px 0 0 -190px;
+  transform: rotateX(55deg) rotate(140deg);
+  animation: orb-sat-spin 11s linear infinite reverse;
+}
+.css-orb-sat-2::before { background: #86efac; box-shadow: 0 0 10px 3px rgba(22,163,74,0.7); }
+
+.css-orb-sat-3 {
+  width: 270px; height: 270px; margin: -135px 0 0 -135px;
+  transform: rotateX(80deg) rotate(250deg);
+  animation: orb-sat-spin 5.5s linear infinite;
+}
+.css-orb-sat-3::before { background: #38bdf8; box-shadow: 0 0 10px 3px rgba(14,165,233,0.8); }
+
+/* Partículas estáticas flotando (sin JS, generadas vía box-shadow) */
+.css-orb-particles {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    -150px -90px 0 0 rgba(129,140,248,0.55),
+    140px -110px 0 -1px rgba(129,140,248,0.45),
+    -110px 100px 0 -1px rgba(129,140,248,0.5),
+    160px 90px 0 0 rgba(129,140,248,0.4),
+    -60px -150px 0 -1px rgba(129,140,248,0.5),
+    70px 150px 0 0 rgba(129,140,248,0.45),
+    -170px 10px 0 -1px rgba(129,140,248,0.4),
+    180px -20px 0 0 rgba(129,140,248,0.5),
+    10px -170px 0 -1px rgba(129,140,248,0.4),
+    -30px 165px 0 0 rgba(129,140,248,0.45);
+  animation: orb-particles-drift 9s ease-in-out infinite;
+}
+
+@keyframes orb-core-highlight-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes orb-core-pulse {
+  0%, 100% { box-shadow: 0 0 60px 8px rgba(79,70,229,0.35), inset -16px -16px 50px rgba(30,27,75,0.55), inset 12px 12px 40px rgba(167,139,250,0.35); }
+  50%      { box-shadow: 0 0 78px 14px rgba(79,70,229,0.5),  inset -16px -16px 50px rgba(30,27,75,0.55), inset 12px 12px 40px rgba(167,139,250,0.45); }
+}
+@keyframes orb-wire-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes orb-ring1-spin {
+  from { transform: rotateX(72deg) rotate(0deg); }
+  to   { transform: rotateX(72deg) rotate(360deg); }
+}
+@keyframes orb-ring2-spin {
+  from { transform: rotateX(60deg) rotateZ(45deg) rotate(0deg); }
+  to   { transform: rotateX(60deg) rotateZ(45deg) rotate(360deg); }
+}
+@keyframes orb-sat-spin {
+  from { transform: rotateX(70deg) rotate(0deg); }
+  to   { transform: rotateX(70deg) rotate(360deg); }
+}
+@keyframes orb-particles-drift {
+  0%, 100% { opacity: 0.6; transform: translateY(0); }
+  50%      { opacity: 1;   transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .css-orb-core, .css-orb-wire, .css-orb-ring-1, .css-orb-ring-2,
+  .css-orb-sat-1, .css-orb-sat-2, .css-orb-sat-3, .css-orb-particles {
+    animation: none;
+  }
+}
+
 /* Remove any Spline watermark remnants */
 spline-viewer::part(logo) { display: none !important; }
 

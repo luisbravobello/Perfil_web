@@ -27,15 +27,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicongrfe/devicon@latest/devicon.min.css">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234f46e5' stroke-width='2'%3E%3Cpolyline points='16 18 22 12 16 6'/%3E%3Cpolyline points='8 6 2 12 8 18'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
-  
-  <!-- Link y CSS
-  <link rel="stylesheet" href="https://unpkg.com/botui/build/botui.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/botui/build/botui-theme-default.css" />
 </head>
 <body>
 
@@ -109,7 +105,16 @@
 
     <div class="hero-visual" aria-hidden="true">
   <div class="spline-scene" style="position: relative; width: 480px; height: 480px;">
-    <canvas id="hero-canvas" class="spline-canvas"></canvas>
+    <div class="css-orb-scene">
+      <div class="css-orb-particles"></div>
+      <div class="css-orb-ring css-orb-ring-1"></div>
+      <div class="css-orb-ring css-orb-ring-2"></div>
+      <div class="css-orb-wire"></div>
+      <div class="css-orb-core"></div>
+      <span class="css-orb-sat css-orb-sat-1"></span>
+      <span class="css-orb-sat css-orb-sat-2"></span>
+      <span class="css-orb-sat css-orb-sat-3"></span>
+    </div>
 
     <div class="tech-chip tc-1">
       <img src="https://unpkg.com/devicon@2.17.0/icons/javascript/javascript-original.svg" width="16" height="16" alt="JavaScript" />
@@ -221,7 +226,7 @@
 
       <article class="skill-card" aria-label="C# - Nivel Intermedio">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/csharp/csharp-original.svg" alt="C#" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/csharp/csharp-original.svg" alt="C#" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">C#</h3>
         <p class="skill-desc">Programación orientada a objetos, .NET, aplicaciones de escritorio y backend robustos.</p>
@@ -233,7 +238,7 @@
 
       <article class="skill-card" aria-label="Java - Nivel Intermedio">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/java/java-original.svg" alt="Java" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/java/java-original.svg" alt="Java" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">Java</h3>
         <p class="skill-desc">Desarrollo orientado a objetos, arquitectura limpia, colecciones y ecosistema empresarial.</p>
@@ -245,7 +250,7 @@
 
       <article class="skill-card" aria-label="JavaScript - En progreso">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/javascript/javascript-original.svg" alt="JavaScript" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/javascript/javascript-original.svg" alt="JavaScript" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">JavaScript</h3>
         <p class="skill-desc">Manipulación del DOM, eventos, asincronía, Fetch API y lógica interactiva en el navegador.</p>
@@ -257,7 +262,7 @@
 
       <article class="skill-card" aria-label="HTML5 - Nivel Intermedio">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/html5/html5-original.svg" alt="HTML5" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/html5/html5-original.svg" alt="HTML5" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">HTML5</h3>
         <p class="skill-desc">Estructura semántica, accesibilidad web, SEO básico, formularios y maquetación estándar.</p>
@@ -269,7 +274,7 @@
 
       <article class="skill-card" aria-label="CSS3 - Nivel Intermedio">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/css3/css3-original.svg" alt="CSS3" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/css3/css3-original.svg" alt="CSS3" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">CSS3</h3>
         <p class="skill-desc">Diseño responsive, sistemas Flexbox y Grid, animaciones y estilado moderno.</p>
@@ -281,7 +286,7 @@
 
       <article class="skill-card" aria-label=".NET - Nivel Intermedio">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/dot-net/dot-net-original.svg" alt=".NET" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/dot-net/dot-net-original.svg" alt=".NET" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">.NET</h3>
         <p class="skill-desc">Ecosistema para desarrollo multiplataforma, Web APIs, arquitecturas MVC y WebForms.</p>
@@ -293,7 +298,7 @@
 
       <article class="skill-card" aria-label="Spring Boot - En progreso">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/spring/spring-original.svg" alt="Spring Boot" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/spring/spring-original.svg" alt="Spring Boot" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">Spring Boot</h3>
         <p class="skill-desc">Creación de APIs REST, inyección de dependencias y persistencia de datos con Spring Data JPA.</p>
@@ -305,7 +310,7 @@
 
       <article class="skill-card" aria-label="SQL Server - Nivel Intermedio">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">SQL Server</h3>
         <p class="skill-desc">Consultas relacionales complejas, procedimientos almacenados, funciones y optimización.</p>
@@ -317,7 +322,7 @@
 
       <article class="skill-card" aria-label="MySQL - Nivel Intermedio">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/mysql/mysql-original.svg" alt="MySQL" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/mysql/mysql-original.svg" alt="MySQL" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">MySQL</h3>
         <p class="skill-desc">Modelado de bases de datos relacionales, integridad referencial y gestión de scripts eficientes.</p>
@@ -329,7 +334,7 @@
 
       <article class="skill-card" aria-label="SQLite - Nivel Intermedio">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/sqlite/sqlite-original.svg" alt="SQLite" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/sqlite/sqlite-original.svg" alt="SQLite" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">SQLite</h3>
         <p class="skill-desc">Bases de datos embebidas y ligeras ideales para aplicaciones móviles, desarrollo local y pruebas.</p>
@@ -341,7 +346,7 @@
 
       <article class="skill-card" aria-label="Docker - En progreso">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/docker/docker-original.svg" alt="Docker" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/docker/docker-original.svg" alt="Docker" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">Docker</h3>
         <p class="skill-desc">Contenedores de aplicaciones para asegurar portabilidad y consistencia entre entornos.</p>
@@ -353,7 +358,7 @@
 
       <article class="skill-card" aria-label="Git - En progreso">
         <div class="skill-tag-top">
-          <img src="https://unpkg.com/devicon@2.17.0/icons/git/git-original.svg" alt="Git" class="devicon-img">
+          <img src="https://unpkg.com/devicon@2.17.0/icons/git/git-original.svg" alt="Git" class="devicon-img" loading="lazy" decoding="async" width="32" height="32">
         </div>
         <h3 class="skill-name">Git &amp; GitHub</h3>
         <p class="skill-desc">Manejo de repositorios distribuidores, flujos de ramas (GitFlow) y control de versiones colaborativo.</p>
@@ -434,7 +439,7 @@
 
       <article class="project-card" id="project-gamematch">
         <div class="project-image-container">
-          <img src="img/GameTracker.jpg" alt="GameMatch Tracker Interface" class="project-img">
+          <img src="img/GameTracker.jpg" alt="GameMatch Tracker Interface" class="project-img" width="900" height="506" loading="lazy" decoding="async">
           <div class="project-badge-overlay"></div>
         </div>
         <div class="project-info">
@@ -457,7 +462,7 @@
 
       <article class="project-card" id="project-nomina">
         <div class="project-image-container">
-          <img src="img/gestornomina.jpg" alt="Gestor de Nómina MVVM Dashboard" class="project-img">
+          <img src="img/gestornomina.jpg" alt="Gestor de Nómina MVVM Dashboard" class="project-img" width="640" height="480" loading="lazy" decoding="async">
         </div>
         <div class="project-info">
           <div class="project-meta">
@@ -479,7 +484,7 @@
 
       <article class="project-card" id="project-puravida">
         <div class="project-image-container">
-          <img src="img/puravida.jpg" alt="Pura Vida PC Event Platform" class="project-img">
+          <img src="img/puravida.jpg" alt="Pura Vida PC Event Platform" class="project-img" width="900" height="506" loading="lazy" decoding="async">
         </div>
         <div class="project-info">
           <div class="project-meta">
@@ -684,198 +689,7 @@
   </a>
 
 
-  <!-- BotUI Library JS -->
-  <script src="https://cdn.jsdelivr.net/vue/2.6.14/vue.min.js"></script>
-  <script src="https://unpkg.com/botui/build/botui.min.js"></script>
-  
   <!-- Main Script -->
-  <script src="script.js"></script>
-
-  <!-- Three.js 3D Hero Animation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-(function() {
-  const canvas = document.getElementById('hero-canvas');
-  if (!canvas) return;
-
-  // ── Configuración Base del Renderizado ──
-  const W = 480, H = 480;
-  // Ajuste de DPI para pantallas retina/alta definición
-  canvas.width  = W * devicePixelRatio;
-  canvas.height = H * devicePixelRatio;
-  canvas.style.width  = W + 'px';
-  canvas.style.height = H + 'px';
-
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(devicePixelRatio);
-  renderer.setSize(W, H);
-  renderer.setClearColor(0x000000, 0); // Fondo transparente
-
-  const scene  = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-  camera.position.set(0, 0, 5); // Posición de la cámara
-
-  // ── Iluminación Cinemática ──
-  // Luz de ambiente sutil para sombras no negras
-  scene.add(new THREE.AmbientLight(0xffffff, 0.3));
-
-  // Luz direccional principal (color índigo/azulado)
-  const dirLight = new THREE.DirectionalLight(0x818cf8, 2.5);
-  dirLight.position.set(3, 4, 5);
-  scene.add(dirLight);
-
-  // Luz de borde (Rim Light) para efecto de halo (color cian)
-  const rimLight = new THREE.DirectionalLight(0x0ea5e9, 1.2);
-  rimLight.position.set(-4, -2, -3);
-  scene.add(rimLight);
-
-  // Luz de punto para brillo central pulsante (color púrpura claro)
-  const fillLight = new THREE.PointLight(0xc4b5fd, 1.8, 12);
-  fillLight.position.set(-2, 3, 2);
-  scene.add(fillLight);
-
-  // ── Núcleo Geométrico Central (Planet/Data Core) ──
-  const sphereGeo  = new THREE.SphereGeometry(1.15, 64, 64);
-  const sphereMat  = new THREE.MeshPhongMaterial({
-    color:     0x4f46e5, // Color principal (Indigo)
-    shininess: 90,
-    specular:  new THREE.Color(0xa78bfa),
-    emissive:  new THREE.Color(0x1e1b4b), // Brillo interno oscuro
-    emissiveIntensity: 0.25,
-  });
-  const sphere = new THREE.Mesh(sphereGeo, sphereMat);
-  scene.add(sphere);
-
-  // ── Halo Atmosférico (Efecto de brillo aditivo) ──
-  const atmosGeo = new THREE.SphereGeometry(1.22, 32, 32);
-  const atmosMat = new THREE.MeshPhongMaterial({
-    color:       0x818cf8, // Color del halo
-    transparent: true,
-    opacity:     0.12,
-    side:        THREE.FrontSide,
-    depthWrite:  false, // No bloquea objetos detrás
-    blending:    THREE.AdditiveBlending, // Brillo acumulativo
-  });
-  scene.add(new THREE.Mesh(atmosGeo, atmosMat));
-
-  // ── Jaula de Alambre Geométrica (Wireframe) ──
-  const wireGeo = new THREE.IcosahedronGeometry(1.55, 1);
-  const wireMat = new THREE.MeshBasicMaterial({
-    color:       0x818cf8,
-    wireframe:   true,
-    transparent: true,
-    opacity:     0.18,
-  });
-  const wire = new THREE.Mesh(wireGeo, wireMat);
-  scene.add(wire);
-
-  // ── Anillo de Datos Principal (Outer Ring) ──
-  const ringGeo = new THREE.TorusGeometry(1.85, 0.012, 8, 120);
-  const ringMat = new THREE.MeshBasicMaterial({ color: 0x8b5cf6, transparent: true, opacity: 0.55 });
-  const ring = new THREE.Mesh(ringGeo, ringMat);
-  ring.rotation.x = Math.PI / 2.3; // Inclinación
-  scene.add(ring);
-
-  // ── Segundo Anillo de Datos (Tilted opposite) ──
-  const ring2 = new THREE.Mesh(
-    new THREE.TorusGeometry(2.2, 0.007, 8, 100),
-    new THREE.MeshBasicMaterial({ color: 0x0ea5e9, transparent: true, opacity: 0.28 })
-  );
-  ring2.rotation.x = Math.PI / 1.5;
-  ring2.rotation.z = Math.PI / 4;
-  scene.add(ring2);
-
-  // ── Satélites Orbitantes (Puntos de datos) ──
-  function makeSat(radius, color, glowColor, speed, tiltX, tiltZ, startAngle) {
-    const pivot = new THREE.Object3D();
-    pivot.rotation.x = tiltX;
-    pivot.rotation.z = tiltZ;
-    scene.add(pivot);
-
-    const geo = new THREE.SphereGeometry(0.055, 12, 12);
-    const mat = new THREE.MeshPhongMaterial({ color, emissive: new THREE.Color(glowColor), emissiveIntensity: 1.2 });
-    const sat = new THREE.Mesh(geo, mat);
-    sat.position.set(radius, 0, 0);
-    pivot.add(sat);
-
-    return { pivot, speed, startAngle };
-  }
-
-  const sats = [
-    makeSat(2.0, 0xc4b5fd, 0x8b5cf6, 0.9,  1.2, 0.3, 0), // Satélite Púrpura
-    makeSat(2.4, 0x86efac, 0x16a34a, 0.55, 0.6, 1.1, Math.PI), // Satélite Verde
-    makeSat(1.75, 0x38bdf8, 0x0ea5e9, 1.3, 0.9, -0.5, 2.0), // Satélite Azul
-  ];
-
-  // ── Campo de Partículas Flotante (Nube de polvo/datos) ──
-  const pCount = 120;
-  const pPositions = new Float32Array(pCount * 3);
-  for (let i = 0; i < pCount; i++) {
-    // Distribución esférica aleatoria
-    const r = 2.5 + Math.random() * 1.8;
-    const theta = Math.random() * Math.PI * 2;
-    const phi   = Math.acos(2 * Math.random() - 1);
-    pPositions[i*3]   = r * Math.sin(phi) * Math.cos(theta);
-    pPositions[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
-    pPositions[i*3+2] = r * Math.cos(phi);
-  }
-  const pGeo = new THREE.BufferGeometry();
-  pGeo.setAttribute('position', new THREE.BufferAttribute(pPositions, 3));
-  const pMat = new THREE.PointsMaterial({ color: 0x818cf8, size: 0.028, transparent: true, opacity: 0.7 });
-  scene.add(new THREE.Points(pGeo, pMat));
-
-  // ── Interactividad con el Mouse (Tilt effect) ──
-  let mouseX = 0, mouseY = 0;
-  // Buscamos el contenedor para los eventos del mouse
-  const container = canvas.closest('.spline-scene') || canvas.parentElement;
-  container.addEventListener('mousemove', e => {
-    const rect = container.getBoundingClientRect();
-    // Normalizamos las coordenadas del mouse de -1 a 1
-    mouseX = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
-    mouseY = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
-  });
-  // Reseteamos la posición al salir
-  container.addEventListener('mouseleave', () => { mouseX = 0; mouseY = 0; });
-
-  // ── Bucle de Animación (Game Loop) ──
-  let t = 0;
-  function animate() {
-    requestAnimationFrame(animate);
-    t += 0.012; // Incremento de tiempo
-
-    // Rotación automática suave + inclinación por mouse
-    sphere.rotation.y = t * 0.18 + mouseX * 0.4;
-    sphere.rotation.x = mouseY * 0.25;
-
-    // Rotación contra-giratoria de la jaula de alambre
-    wire.rotation.y = -t * 0.09;
-    wire.rotation.x =  t * 0.06;
-
-    // Rotación de los anillos
-    ring.rotation.z  =  t * 0.12;
-    ring2.rotation.z = -t * 0.07;
-
-    // Órbita de los satélites
-    sats.forEach(s => {
-      s.pivot.rotation.y = s.startAngle + t * s.speed;
-    });
-
-    // Efecto de brillo pulsante en la luz de punto
-    fillLight.intensity = 1.8 + Math.sin(t * 1.4) * 0.6;
-
-    renderer.render(scene, camera);
-  }
-  animate(); // Iniciamos la animación
-
-  // ── Responsividad al cambiar el tamaño de ventana ──
-  window.addEventListener('resize', () => {
-    const parent = canvas.parentElement;
-    const size = Math.min(parent.offsetWidth, 480);
-    // Mantenemos la relación de aspecto 1:1
-    renderer.setSize(size, size);
-    camera.updateProjectionMatrix();
-  });
-})();
-</script>
+  <script src="script.js" defer></script>
 </body>
 </html>
